@@ -1,0 +1,14 @@
+root = true
+
+[*]
+tab_width = 4
+indent_style = space
+
+[Makefile]
+indent_style = tab
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[*.{nomad,hcl}]
+indent_size = 2

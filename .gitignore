@@ -1,0 +1,10 @@
+# Ansible
+galaxy/
+*.retry
+
+# Python
+venv/
+__pycache__/
+
+# Local variables files
+*.local.yml

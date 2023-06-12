@@ -1,0 +1,10 @@
+---
+# https://ansible-lint.readthedocs.io/en/latest/configuring/
+
+exclude_paths:
+  - galaxy/
+
+skip_list:
+  - yaml
+  # allow free-form statements like 'copy: src=foo dest=bar'
+  - no-free-form

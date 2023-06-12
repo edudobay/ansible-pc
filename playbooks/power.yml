@@ -1,0 +1,11 @@
+---
+- hosts: all
+  name: 'Power settings'
+  tasks:
+    # This is important to skip sleeping on the login screen.
+    - name: 'Disable automatic suspending on AC power (GNOME Settings Daemon).'
+      community.general.dconf:
+        key: "/org/gnome/settings-daemon/plugins/power/sleep-inactive-ac-timeout"
+        value: "0"
+        state: present
+      become: true

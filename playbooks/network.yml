@@ -1,0 +1,7 @@
+---
+- hosts: all
+  name: 'Network settings'
+  tasks:
+    - name: 'Policy: allow users in group "network" to modify NetworkManager settings'
+      ansible.builtin.copy: src=files/50-org.freedesktop.NetworkManager.rules dest=/etc/polkit-1/rules.d/ owner=root group=root mode=0644
+      become: true
